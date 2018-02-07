@@ -1,0 +1,46 @@
+{
+  "title": "ESCOLAR API DOCUMENTACIÓN",
+  "baseurl": "localhost",
+  "services": [
+    {
+      "protected": false,
+      "url": "/admin/login",
+      "method": "POST",
+      "title": "Admin Login",
+      "description": "Login para administradores",
+      "request": {
+        "ci": 1234567,
+        "password": "bugsbunny"
+      },
+      "success": {
+        "message": "Si todo fue bien",
+        "json": {
+          "status": "success",
+          "message": "Bienvenido Bugs",
+          "content": {
+              "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTc5OTU5ODMsImRhdGEiOnsiaWQiOjIwNSwiY2kiOiIxMjM0NTY3In19.2cCz9sc47lPpCRHxftIpInUCO4PcLwXI-VCmeWbXar0AK4e_h3qRMp1GQGxzF_JMFxsGbj7IGeO3DSaLfDiSOA",
+              "data": {
+                  "id": 205,
+                  "nombres": "Bugs",
+                  "appat": "Bunny",
+                  "apmat": "Bunny",
+                  "cel": "77777777",
+                  "ci": "1234567",
+                  "password": "$2y$10$Sq1JmBmUGNo8uuyC9PJKtuPE9/pOUpTiubnqrHk/nwBymapqsDvNO"
+              }
+          }
+        }
+      },
+      "warning": [
+        {
+          "message": "Si hubo un error con las credenciales o no se reconocen los campos",
+          "json": {
+            "status": "warning",
+            "content": "Datos de ingreso no válidos"
+          }
+        }
+      ],
+      "error": []
+    }
+  ]
+}
