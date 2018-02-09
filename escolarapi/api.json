@@ -54,7 +54,7 @@
       "method": "GET",
       "title": "Habilitar Cursos",
       "description": "Ruta para habilitar o desabilitar cursos",
-      "request": null,
+      "request": {},
       "success": {
         "code": 200,
         "devmsg": "Cursos obtenido correctamente",
