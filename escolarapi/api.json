@@ -1,813 +1,800 @@
 {
-  "title": "ESCOLAR API DOCUMENTACIÓN",
-  "baseurl": "http://blackcrozz.com/escolar-api",
-  "services": [
-    {
-      "protected": false,
-      "url": "/admin/login",
-      "method": "POST",
-      "title": "Admin Login",
-      "description": "Login para administradores",
-      "request": {
-        "ci": 1234567,
-        "password": "bugsbunny"
-      },
-      "success": {
-          "message": "exito",
-          "json": {
-            "code": 200,
-            "devmsg": "Login correcto",
-            "usrmsg": "Buenas tardes Bugs",
-            "content": {
-                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTgxOTM4NzgsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.5ZMzfBVnIgW8tv3tlA5CFrmX8abqjavm9Vwq21O9oNu9gihAlaI-bVki_zx03BxjC8fLllKHz2rY12vQ6zPfrw",
-                "data": {
-                    "nombres": "Bugs",
-                    "appat": "Bunny",
-                    "apmat": "Bunny",
-                    "cel": "77777777",
-                    "ci": "1234567"
-                }
-            }
-          }
-      },
-      "warning": [
+    "title": "ESCOLAR API DOCUMENTACIÓN",
+    "baseurl": "http://blackcrozz.com/escolar-api",
+    "services": [
         {
-          "message": "Si el usuario o el username son incorrectos",
-          "json": {
-            "code": 401,
-            "devmsg": "ci o password inválidos.",
-            "usrmsg": "Ups... tuvimos un problema con el CI o password ingresados, por favor intente de nuevo"
-          }
-        }
-      ],
-      "error": [
-        {
-          "message": "Si los campos de la peticion son incorrectos",
-          "json": {
-            "code": 400,
-            "devmsg": "No se reconocen uno o varios de los campos: ci, password",
-            "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
-          }
-        }
-      ]
-    },
-    {
-      "protected": true,
-      "url": "/admin/cursos",
-      "method": "GET",
-      "title": "Habilitar Cursos",
-      "description": "Ruta para habilitar o desabilitar cursos",
-      "request": {},
-      "success": {
-          "message": "obtenido satisfactoriamente",
-          "json": {
-            "code": 200,
-            "devmsg": "Cursos obtenido correctamente",
-            "usrmsg": "Cursos cargados",
-            "content": {
-                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTgxOTQyMzYsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.RgX7KapsBQzJXvhCjMH8TFQdOa_H9X8McFXu2riVK8ORb2BqOlIvVjsZoGXdn4VyuaDCCMrXUwFb_ys44EtD4Q",
-                "data": [
-                    {
-                        "id": 1,
-                        "nro": 1,
-                        "paralelo": "A",
-                        "estado": 0
-                    },
-                    {
-                        "id": 2,
-                        "nro": 1,
-                        "paralelo": "B",
-                        "estado": 0
-                    },
-                    {
-                        "id": 3,
-                        "nro": 1,
-                        "paralelo": "C",
-                        "estado": 0
-                    },
-                    {
-                        "id": 4,
-                        "nro": 1,
-                        "paralelo": "D",
-                        "estado": 0
-                    },
-                    {
-                        "id": 5,
-                        "nro": 1,
-                        "paralelo": "E",
-                        "estado": 0
-                    },
-                    {
-                        "id": 6,
-                        "nro": 1,
-                        "paralelo": "F",
-                        "estado": 0
-                    },
-                    {
-                        "id": 7,
-                        "nro": 1,
-                        "paralelo": "G",
-                        "estado": 0
-                    },
-                    {
-                        "id": 8,
-                        "nro": 1,
-                        "paralelo": "H",
-                        "estado": 0
-                    },
-                    {
-                        "id": 9,
-                        "nro": 2,
-                        "paralelo": "A",
-                        "estado": 0
-                    },
-                    {
-                        "id": 10,
-                        "nro": 2,
-                        "paralelo": "B",
-                        "estado": 0
-                    },
-                    {
-                        "id": 11,
-                        "nro": 2,
-                        "paralelo": "C",
-                        "estado": 0
-                    },
-                    {
-                        "id": 12,
-                        "nro": 2,
-                        "paralelo": "D",
-                        "estado": 0
-                    },
-                    {
-                        "id": 13,
-                        "nro": 2,
-                        "paralelo": "E",
-                        "estado": 0
-                    },
-                    {
-                        "id": 14,
-                        "nro": 2,
-                        "paralelo": "F",
-                        "estado": 0
-                    },
-                    {
-                        "id": 15,
-                        "nro": 2,
-                        "paralelo": "G",
-                        "estado": 0
-                    },
-                    {
-                        "id": 16,
-                        "nro": 2,
-                        "paralelo": "H",
-                        "estado": 0
-                    },
-                    {
-                        "id": 17,
-                        "nro": 3,
-                        "paralelo": "A",
-                        "estado": 0
-                    },
-                    {
-                        "id": 18,
-                        "nro": 3,
-                        "paralelo": "B",
-                        "estado": 0
-                    },
-                    {
-                        "id": 19,
-                        "nro": 3,
-                        "paralelo": "C",
-                        "estado": 0
-                    },
-                    {
-                        "id": 20,
-                        "nro": 3,
-                        "paralelo": "D",
-                        "estado": 0
-                    },
-                    {
-                        "id": 21,
-                        "nro": 3,
-                        "paralelo": "E",
-                        "estado": 0
-                    },
-                    {
-                        "id": 22,
-                        "nro": 3,
-                        "paralelo": "F",
-                        "estado": 0
-                    },
-                    {
-                        "id": 23,
-                        "nro": 3,
-                        "paralelo": "G",
-                        "estado": 0
-                    },
-                    {
-                        "id": 24,
-                        "nro": 3,
-                        "paralelo": "H",
-                        "estado": 0
-                    },
-                    {
-                        "id": 25,
-                        "nro": 4,
-                        "paralelo": "A",
-                        "estado": 0
-                    },
-                    {
-                        "id": 26,
-                        "nro": 4,
-                        "paralelo": "B",
-                        "estado": 0
-                    },
-                    {
-                        "id": 27,
-                        "nro": 4,
-                        "paralelo": "C",
-                        "estado": 0
-                    },
-                    {
-                        "id": 28,
-                        "nro": 4,
-                        "paralelo": "D",
-                        "estado": 0
-                    },
-                    {
-                        "id": 29,
-                        "nro": 4,
-                        "paralelo": "E",
-                        "estado": 0
-                    },
-                    {
-                        "id": 30,
-                        "nro": 4,
-                        "paralelo": "F",
-                        "estado": 0
-                    },
-                    {
-                        "id": 31,
-                        "nro": 4,
-                        "paralelo": "G",
-                        "estado": 0
-                    },
-                    {
-                        "id": 32,
-                        "nro": 4,
-                        "paralelo": "H",
-                        "estado": 0
-                    },
-                    {
-                        "id": 33,
-                        "nro": 5,
-                        "paralelo": "A",
-                        "estado": 0
-                    },
-                    {
-                        "id": 34,
-                        "nro": 5,
-                        "paralelo": "B",
-                        "estado": 0
-                    },
-                    {
-                        "id": 35,
-                        "nro": 5,
-                        "paralelo": "C",
-                        "estado": 0
-                    },
-                    {
-                        "id": 36,
-                        "nro": 5,
-                        "paralelo": "D",
-                        "estado": 0
-                    },
-                    {
-                        "id": 37,
-                        "nro": 5,
-                        "paralelo": "E",
-                        "estado": 0
-                    },
-                    {
-                        "id": 38,
-                        "nro": 5,
-                        "paralelo": "F",
-                        "estado": 0
-                    },
-                    {
-                        "id": 39,
-                        "nro": 5,
-                        "paralelo": "G",
-                        "estado": 0
-                    },
-                    {
-                        "id": 40,
-                        "nro": 5,
-                        "paralelo": "H",
-                        "estado": 0
-                    },
-                    {
-                        "id": 41,
-                        "nro": 6,
-                        "paralelo": "A",
-                        "estado": 0
-                    },
-                    {
-                        "id": 42,
-                        "nro": 6,
-                        "paralelo": "B",
-                        "estado": 0
-                    },
-                    {
-                        "id": 43,
-                        "nro": 6,
-                        "paralelo": "C",
-                        "estado": 0
-                    },
-                    {
-                        "id": 44,
-                        "nro": 6,
-                        "paralelo": "D",
-                        "estado": 0
-                    },
-                    {
-                        "id": 45,
-                        "nro": 6,
-                        "paralelo": "E",
-                        "estado": 0
-                    },
-                    {
-                        "id": 46,
-                        "nro": 6,
-                        "paralelo": "F",
-                        "estado": 0
-                    },
-                    {
-                        "id": 47,
-                        "nro": 6,
-                        "paralelo": "G",
-                        "estado": 0
-                    },
-                    {
-                        "id": 48,
-                        "nro": 6,
-                        "paralelo": "H",
-                        "estado": 0
-                    }
-                ]
-            }
-          }
-      },
-      "warning": [
-        {
-          "message": "Si el administrador esta inactivo por un tiempo prolongado",
-          "json": {
-            "code": 401,
-            "devmsg": "Token expirado.",
-            "usrmsg": "Ha estado inactivo por un largo tiempo, por favor ingrese de nuevo"
-          }
-        }
-      ],
-      "error": []
-    },
-    {
-        "protected": true,
-        "url": "/admin/cursos",
-        "method": "POST",
-        "title": "Habilitar y Desabilitar Cursos",
-        "description": "Web service para el administrador para habilitar y deshabilitar cursos, para facilitar la inscripcion",
-        "request": {
-          "habilitados": [8, 16, 5, 3]
-        },
-        "success": {
-            "message": "Retorno todos los cursos con los cambios realizados.",
-            "json": {
-                "code": 200,
-                "devmsg": "Cursos habilitados y deshabilitados correctamente",
-                "usrmsg": "Cambios guardados...",
-                "content": {
-                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTgyODc4NjAsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.k1G01EzBFIrzIU8_59qgyEQ0ITh3xqPOKNQk1_fj5sdCdwXyeK9zn_wVIebPrhwjZpcW06o-qk902CC2rt1mpg",
-                    "data": [
-                        {
-                            "id": 1,
-                            "nro": 1,
-                            "paralelo": "A",
-                            "estado": 0
-                        },
-                        {
-                            "id": 2,
-                            "nro": 1,
-                            "paralelo": "B",
-                            "estado": 0
-                        },
-                        {
-                            "id": 3,
-                            "nro": 1,
-                            "paralelo": "C",
-                            "estado": 1
-                        },
-                        {
-                            "id": 4,
-                            "nro": 1,
-                            "paralelo": "D",
-                            "estado": 0
-                        },
-                        {
-                            "id": 5,
-                            "nro": 1,
-                            "paralelo": "E",
-                            "estado": 1
-                        },
-                        {
-                            "id": 6,
-                            "nro": 1,
-                            "paralelo": "F",
-                            "estado": 0
-                        },
-                        {
-                            "id": 7,
-                            "nro": 1,
-                            "paralelo": "G",
-                            "estado": 0
-                        },
-                        {
-                            "id": 8,
-                            "nro": 1,
-                            "paralelo": "H",
-                            "estado": 1
-                        },
-                        {
-                            "id": 9,
-                            "nro": 2,
-                            "paralelo": "A",
-                            "estado": 0
-                        },
-                        {
-                            "id": 10,
-                            "nro": 2,
-                            "paralelo": "B",
-                            "estado": 0
-                        },
-                        {
-                            "id": 11,
-                            "nro": 2,
-                            "paralelo": "C",
-                            "estado": 0
-                        },
-                        {
-                            "id": 12,
-                            "nro": 2,
-                            "paralelo": "D",
-                            "estado": 0
-                        },
-                        {
-                            "id": 13,
-                            "nro": 2,
-                            "paralelo": "E",
-                            "estado": 0
-                        },
-                        {
-                            "id": 14,
-                            "nro": 2,
-                            "paralelo": "F",
-                            "estado": 0
-                        },
-                        {
-                            "id": 15,
-                            "nro": 2,
-                            "paralelo": "G",
-                            "estado": 0
-                        },
-                        {
-                            "id": 16,
-                            "nro": 2,
-                            "paralelo": "H",
-                            "estado": 1
-                        },
-                        {
-                            "id": 17,
-                            "nro": 3,
-                            "paralelo": "A",
-                            "estado": 0
-                        },
-                        {
-                            "id": 18,
-                            "nro": 3,
-                            "paralelo": "B",
-                            "estado": 0
-                        },
-                        {
-                            "id": 19,
-                            "nro": 3,
-                            "paralelo": "C",
-                            "estado": 0
-                        },
-                        {
-                            "id": 20,
-                            "nro": 3,
-                            "paralelo": "D",
-                            "estado": 0
-                        },
-                        {
-                            "id": 21,
-                            "nro": 3,
-                            "paralelo": "E",
-                            "estado": 0
-                        },
-                        {
-                            "id": 22,
-                            "nro": 3,
-                            "paralelo": "F",
-                            "estado": 0
-                        },
-                        {
-                            "id": 23,
-                            "nro": 3,
-                            "paralelo": "G",
-                            "estado": 0
-                        },
-                        {
-                            "id": 24,
-                            "nro": 3,
-                            "paralelo": "H",
-                            "estado": 0
-                        },
-                        {
-                            "id": 25,
-                            "nro": 4,
-                            "paralelo": "A",
-                            "estado": 0
-                        },
-                        {
-                            "id": 26,
-                            "nro": 4,
-                            "paralelo": "B",
-                            "estado": 0
-                        },
-                        {
-                            "id": 27,
-                            "nro": 4,
-                            "paralelo": "C",
-                            "estado": 0
-                        },
-                        {
-                            "id": 28,
-                            "nro": 4,
-                            "paralelo": "D",
-                            "estado": 0
-                        },
-                        {
-                            "id": 29,
-                            "nro": 4,
-                            "paralelo": "E",
-                            "estado": 0
-                        },
-                        {
-                            "id": 30,
-                            "nro": 4,
-                            "paralelo": "F",
-                            "estado": 0
-                        },
-                        {
-                            "id": 31,
-                            "nro": 4,
-                            "paralelo": "G",
-                            "estado": 0
-                        },
-                        {
-                            "id": 32,
-                            "nro": 4,
-                            "paralelo": "H",
-                            "estado": 0
-                        },
-                        {
-                            "id": 33,
-                            "nro": 5,
-                            "paralelo": "A",
-                            "estado": 0
-                        },
-                        {
-                            "id": 34,
-                            "nro": 5,
-                            "paralelo": "B",
-                            "estado": 0
-                        },
-                        {
-                            "id": 35,
-                            "nro": 5,
-                            "paralelo": "C",
-                            "estado": 0
-                        },
-                        {
-                            "id": 36,
-                            "nro": 5,
-                            "paralelo": "D",
-                            "estado": 0
-                        },
-                        {
-                            "id": 37,
-                            "nro": 5,
-                            "paralelo": "E",
-                            "estado": 0
-                        },
-                        {
-                            "id": 38,
-                            "nro": 5,
-                            "paralelo": "F",
-                            "estado": 0
-                        },
-                        {
-                            "id": 39,
-                            "nro": 5,
-                            "paralelo": "G",
-                            "estado": 0
-                        },
-                        {
-                            "id": 40,
-                            "nro": 5,
-                            "paralelo": "H",
-                            "estado": 0
-                        },
-                        {
-                            "id": 41,
-                            "nro": 6,
-                            "paralelo": "A",
-                            "estado": 0
-                        },
-                        {
-                            "id": 42,
-                            "nro": 6,
-                            "paralelo": "B",
-                            "estado": 0
-                        },
-                        {
-                            "id": 43,
-                            "nro": 6,
-                            "paralelo": "C",
-                            "estado": 0
-                        },
-                        {
-                            "id": 44,
-                            "nro": 6,
-                            "paralelo": "D",
-                            "estado": 0
-                        },
-                        {
-                            "id": 45,
-                            "nro": 6,
-                            "paralelo": "E",
-                            "estado": 0
-                        },
-                        {
-                            "id": 46,
-                            "nro": 6,
-                            "paralelo": "F",
-                            "estado": 0
-                        },
-                        {
-                            "id": 47,
-                            "nro": 6,
-                            "paralelo": "G",
-                            "estado": 0
-                        },
-                        {
-                            "id": 48,
-                            "nro": 6,
-                            "paralelo": "H",
-                            "estado": 0
-                        }
-                    ]
-                }
-            }
-        },
-        "warning": [],
-        "error": [
-          {
-            "message": "Si los campos de la peticion son incorrectos",
-            "json": {
-                "code": 400,
-                "devmsg": "No se reconocen uno o varios de los campos: habilitados",
-                "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
-            }
-          },
-          {
-            "message": "Si el campo habilitados tiene otro formato.",
-            "json": {
-                "code": 400,
-                "devmsg": "El campo habilitados debe ser un Array",
-                "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
-            }
-          }
-        ]
-    },
-    {
-        "protected": true,
-        "url": "/admin/inscripcion",
-        "method": "POST",
-        "title": "Inscripción de Estudiantes",
-        "description": "Ruta para inscribir estudiantes, solo lo puede hacer el admin, aponombre: nombre de apoderado, apopar: parentesco con el estudiante(padre, madre, tio, etc.)",
-        "request": {
-            "cursoid": 2,
-            "nombres": "Carla Andrea",
-            "appat": "Pérez",
-            "apmat": "Gironda",
-            "ci": "888856",
-            "dir": "Zona Villa Imperio, Calle Romero, nro 265",
-            "cel": "6868655",
-            "aponombre": "Victor Manceda Doria",
-            "apocel": "66666666",
-            "apopar": "Papá"
-        },
-        "success": {
-            "message": "Retornamos el nuevo token del admin, y en data el username generado para el estudiante, dicho username es también su password por defecto",
-            "json": {
-                "code": 200,
-                "devmsg": "Registro correcto",
-                "usrmsg": "Estudiante: Carla Andrea inscrito correctamente en el curso: 1° de Secundaria, paralelo: B",
-                "content": {
-                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTk2MTg3NDIsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.EljDZwTxf7XIn1BFaPeaJU3z5Ltisz52fUjgqGF_qJa_RTFNQWXyuCBapoOsnOaIloCBUn26cYi1btxbT2_YrA",
-                    "data": "cperez1"
-                }
-            }
-        },
-        "warning": [],
-        "error": [
-          {
-            "message": "Si el id de los cursos es incorrecto",
-            "json": {
-                "code": 400,
-                "devmsg": "No existe el curso con ID: 200",
-                "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
-            }
-          },
-          {
-            "message": "Si los campos no estan correctos",
-            "json": {
-                "code": 400,
-                "devmsg": "No se reconocen uno o varios de los campos: cursoid, nombres, appat, apmat, ci, dir, cel, aponombre, apocel, apopar",
-                "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
-            }
-          }
-        ]
-    },
-    {
-        "protected": true,
-        "url": "/student/login",
-        "method": "POST",
-        "title": "Login de Estudiantes",
-        "description": "Ruta para loguearse como estudiante, solo para la APP",
-        "request": {
-            "username": "cperez2",
-            "password": "cperez2"
-        },
-        "success": {
-            "message": "Retornamos el nuevo token del estudiante(no cambiara nunca), datos del estudiante y de su apoderado",
-            "json": {
-                "code": 200,
-                "devmsg": "Login correcto",
-                "usrmsg": "Bienvenido/a, Carla Andrea",
-                "content": {
-                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJkYXRhIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImNwZXJlejIifX0.9qq07QN9TSUUkd9P348ty967o-2AB2dMkZuK3oeLeMqok5kdcwtecevVwLWJmiyGtOY2L_dDqe3NsY-wzlKYJw",
-                    "data": {
-                        "id": 2,
-                        "apoderado_id": 2,
-                        "ci": "888856",
-                        "nombres": "Carla Andrea",
-                        "appat": "Pérez",
-                        "apmat": "Gironda",
-                        "username": "cperez2",
-                        "dir": "Zona Villa Imperio, Calle Romero, nro 265",
-                        "nrocel": "6868655",
-                        "apoderado": {
-                            "nombre": "Victor Manceda Doria",
-                            "nroref": "66666666",
-                            "parentesco": "Papá"
-                        }
-                    }
-                }
-            }
-        },
-        "warning": [
-            {
-                "message": "si el username o password es incorrecto",
+            "protected": false,
+            "url": "/admin/login",
+            "method": "POST",
+            "title": "Admin Login",
+            "description": "Login para administradores",
+            "request": {
+                "ci": 1234567,
+                "password": "bugsbunny"
+            },
+            "success": {
+                "message": "exito",
                 "json": {
-                    "code": 401,
-                    "devmsg": "username no existe",
-                    "usrmsg": "Verifica los datos de ingreso e intenta de nuevo"
+                    "code": 200,
+                    "devmsg": "Login correcto",
+                    "usrmsg": "Buenas tardes Bugs",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTgxOTM4NzgsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.5ZMzfBVnIgW8tv3tlA5CFrmX8abqjavm9Vwq21O9oNu9gihAlaI-bVki_zx03BxjC8fLllKHz2rY12vQ6zPfrw",
+                        "data": {
+                            "nombres": "Bugs",
+                            "appat": "Bunny",
+                            "apmat": "Bunny",
+                            "cel": "77777777",
+                            "ci": "1234567"
+                        }
+                    }
                 }
-            }
-        ],
-        "error": [
-          {
-            "message": "Si los campos no estan correctos",
-            "json": {
-                "code": 400,
-                "devmsg": "No se reconocen uno o varios de los campos: username, password",
-                "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
-            }
-          }
-        ]
-    }
+            },
+            "warning": [
+                {
+                    "message": "Si el usuario o el username son incorrectos",
+                    "json": {
+                        "code": 401,
+                        "devmsg": "ci o password inválidos.",
+                        "usrmsg": "Ups... tuvimos un problema con el CI o password ingresados, por favor intente de nuevo"
+                    }
+                }
+            ],
+            "error": [
+                {
+                    "message": "Si los campos de la peticion son incorrectos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No se reconocen uno o varios de los campos: ci, password",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                }
+            ]
+        },
+        {
+            "protected": true,
+            "url": "/admin/cursos",
+            "method": "GET",
+            "title": "Habilitar Cursos",
+            "description": "Ruta para habilitar o desabilitar cursos",
+            "request": {},
+            "success": {
+                "message": "obtenido satisfactoriamente",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Cursos obtenido correctamente",
+                    "usrmsg": "Cursos cargados",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTk2NzMwMTMsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.Iztmw6fghDqVyOzvVZhTYAZza3pjSDGciC-lhIOCp75sOj5kwv8BB0NRKWmzdRrWoKW5iTHh0zVL_NAlDJdwUQ",
+                        "data": [
+                            {
+                                "curso": 1,
+                                "paralelos": [
+                                    {
+                                        "id": 1,
+                                        "paralelo": "A",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 2,
+                                        "paralelo": "B",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 3,
+                                        "paralelo": "C",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 4,
+                                        "paralelo": "D",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 5,
+                                        "paralelo": "E",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 6,
+                                        "paralelo": "F",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 7,
+                                        "paralelo": "G",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 8,
+                                        "paralelo": "H",
+                                        "estado": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "curso": 2,
+                                "paralelos": [
+                                    {
+                                        "id": 9,
+                                        "paralelo": "A",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 10,
+                                        "paralelo": "B",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 11,
+                                        "paralelo": "C",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 12,
+                                        "paralelo": "D",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 13,
+                                        "paralelo": "E",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 14,
+                                        "paralelo": "F",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 15,
+                                        "paralelo": "G",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 16,
+                                        "paralelo": "H",
+                                        "estado": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "curso": 3,
+                                "paralelos": [
+                                    {
+                                        "id": 17,
+                                        "paralelo": "A",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 18,
+                                        "paralelo": "B",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 19,
+                                        "paralelo": "C",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 20,
+                                        "paralelo": "D",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 21,
+                                        "paralelo": "E",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 22,
+                                        "paralelo": "F",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 23,
+                                        "paralelo": "G",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 24,
+                                        "paralelo": "H",
+                                        "estado": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "curso": 4,
+                                "paralelos": [
+                                    {
+                                        "id": 25,
+                                        "paralelo": "A",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 26,
+                                        "paralelo": "B",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 27,
+                                        "paralelo": "C",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 28,
+                                        "paralelo": "D",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 29,
+                                        "paralelo": "E",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 30,
+                                        "paralelo": "F",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 31,
+                                        "paralelo": "G",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 32,
+                                        "paralelo": "H",
+                                        "estado": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "curso": 5,
+                                "paralelos": [
+                                    {
+                                        "id": 33,
+                                        "paralelo": "A",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 34,
+                                        "paralelo": "B",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 35,
+                                        "paralelo": "C",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 36,
+                                        "paralelo": "D",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 37,
+                                        "paralelo": "E",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 38,
+                                        "paralelo": "F",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 39,
+                                        "paralelo": "G",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 40,
+                                        "paralelo": "H",
+                                        "estado": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "curso": 6,
+                                "paralelos": [
+                                    {
+                                        "id": 41,
+                                        "paralelo": "A",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 42,
+                                        "paralelo": "B",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 43,
+                                        "paralelo": "C",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 44,
+                                        "paralelo": "D",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 45,
+                                        "paralelo": "E",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 46,
+                                        "paralelo": "F",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 47,
+                                        "paralelo": "G",
+                                        "estado": 0
+                                    },
+                                    {
+                                        "id": 48,
+                                        "paralelo": "H",
+                                        "estado": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "warning": [
+                {
+                    "message": "Si el administrador esta inactivo por un tiempo prolongado",
+                    "json": {
+                        "code": 401,
+                        "devmsg": "Token expirado.",
+                        "usrmsg": "Ha estado inactivo por un largo tiempo, por favor ingrese de nuevo"
+                    }
+                }
+            ],
+            "error": []
+        },
+        {
+            "protected": true,
+            "url": "/admin/cursos",
+            "method": "POST",
+            "title": "Habilitar y Desabilitar Cursos",
+            "description": "Web service para el administrador para habilitar y deshabilitar cursos, para facilitar la inscripcion",
+            "request": {
+                "habilitados": [
+                    8,
+                    16,
+                    5,
+                    3
+                ]
+            },
+            "success": {
+                "message": "Retorno todos los cursos con los cambios realizados.",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Cursos habilitados y deshabilitados correctamente",
+                    "usrmsg": "Cambios guardados...",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTgyODc4NjAsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.k1G01EzBFIrzIU8_59qgyEQ0ITh3xqPOKNQk1_fj5sdCdwXyeK9zn_wVIebPrhwjZpcW06o-qk902CC2rt1mpg",
+                        "data": [
+                            {
+                                "id": 1,
+                                "nro": 1,
+                                "paralelo": "A",
+                                "estado": 0
+                            },
+                            {
+                                "id": 2,
+                                "nro": 1,
+                                "paralelo": "B",
+                                "estado": 0
+                            },
+                            {
+                                "id": 3,
+                                "nro": 1,
+                                "paralelo": "C",
+                                "estado": 1
+                            },
+                            {
+                                "id": 4,
+                                "nro": 1,
+                                "paralelo": "D",
+                                "estado": 0
+                            },
+                            {
+                                "id": 5,
+                                "nro": 1,
+                                "paralelo": "E",
+                                "estado": 1
+                            },
+                            {
+                                "id": 6,
+                                "nro": 1,
+                                "paralelo": "F",
+                                "estado": 0
+                            },
+                            {
+                                "id": 7,
+                                "nro": 1,
+                                "paralelo": "G",
+                                "estado": 0
+                            },
+                            {
+                                "id": 8,
+                                "nro": 1,
+                                "paralelo": "H",
+                                "estado": 1
+                            },
+                            {
+                                "id": 9,
+                                "nro": 2,
+                                "paralelo": "A",
+                                "estado": 0
+                            },
+                            {
+                                "id": 10,
+                                "nro": 2,
+                                "paralelo": "B",
+                                "estado": 0
+                            },
+                            {
+                                "id": 11,
+                                "nro": 2,
+                                "paralelo": "C",
+                                "estado": 0
+                            },
+                            {
+                                "id": 12,
+                                "nro": 2,
+                                "paralelo": "D",
+                                "estado": 0
+                            },
+                            {
+                                "id": 13,
+                                "nro": 2,
+                                "paralelo": "E",
+                                "estado": 0
+                            },
+                            {
+                                "id": 14,
+                                "nro": 2,
+                                "paralelo": "F",
+                                "estado": 0
+                            },
+                            {
+                                "id": 15,
+                                "nro": 2,
+                                "paralelo": "G",
+                                "estado": 0
+                            },
+                            {
+                                "id": 16,
+                                "nro": 2,
+                                "paralelo": "H",
+                                "estado": 1
+                            },
+                            {
+                                "id": 17,
+                                "nro": 3,
+                                "paralelo": "A",
+                                "estado": 0
+                            },
+                            {
+                                "id": 18,
+                                "nro": 3,
+                                "paralelo": "B",
+                                "estado": 0
+                            },
+                            {
+                                "id": 19,
+                                "nro": 3,
+                                "paralelo": "C",
+                                "estado": 0
+                            },
+                            {
+                                "id": 20,
+                                "nro": 3,
+                                "paralelo": "D",
+                                "estado": 0
+                            },
+                            {
+                                "id": 21,
+                                "nro": 3,
+                                "paralelo": "E",
+                                "estado": 0
+                            },
+                            {
+                                "id": 22,
+                                "nro": 3,
+                                "paralelo": "F",
+                                "estado": 0
+                            },
+                            {
+                                "id": 23,
+                                "nro": 3,
+                                "paralelo": "G",
+                                "estado": 0
+                            },
+                            {
+                                "id": 24,
+                                "nro": 3,
+                                "paralelo": "H",
+                                "estado": 0
+                            },
+                            {
+                                "id": 25,
+                                "nro": 4,
+                                "paralelo": "A",
+                                "estado": 0
+                            },
+                            {
+                                "id": 26,
+                                "nro": 4,
+                                "paralelo": "B",
+                                "estado": 0
+                            },
+                            {
+                                "id": 27,
+                                "nro": 4,
+                                "paralelo": "C",
+                                "estado": 0
+                            },
+                            {
+                                "id": 28,
+                                "nro": 4,
+                                "paralelo": "D",
+                                "estado": 0
+                            },
+                            {
+                                "id": 29,
+                                "nro": 4,
+                                "paralelo": "E",
+                                "estado": 0
+                            },
+                            {
+                                "id": 30,
+                                "nro": 4,
+                                "paralelo": "F",
+                                "estado": 0
+                            },
+                            {
+                                "id": 31,
+                                "nro": 4,
+                                "paralelo": "G",
+                                "estado": 0
+                            },
+                            {
+                                "id": 32,
+                                "nro": 4,
+                                "paralelo": "H",
+                                "estado": 0
+                            },
+                            {
+                                "id": 33,
+                                "nro": 5,
+                                "paralelo": "A",
+                                "estado": 0
+                            },
+                            {
+                                "id": 34,
+                                "nro": 5,
+                                "paralelo": "B",
+                                "estado": 0
+                            },
+                            {
+                                "id": 35,
+                                "nro": 5,
+                                "paralelo": "C",
+                                "estado": 0
+                            },
+                            {
+                                "id": 36,
+                                "nro": 5,
+                                "paralelo": "D",
+                                "estado": 0
+                            },
+                            {
+                                "id": 37,
+                                "nro": 5,
+                                "paralelo": "E",
+                                "estado": 0
+                            },
+                            {
+                                "id": 38,
+                                "nro": 5,
+                                "paralelo": "F",
+                                "estado": 0
+                            },
+                            {
+                                "id": 39,
+                                "nro": 5,
+                                "paralelo": "G",
+                                "estado": 0
+                            },
+                            {
+                                "id": 40,
+                                "nro": 5,
+                                "paralelo": "H",
+                                "estado": 0
+                            },
+                            {
+                                "id": 41,
+                                "nro": 6,
+                                "paralelo": "A",
+                                "estado": 0
+                            },
+                            {
+                                "id": 42,
+                                "nro": 6,
+                                "paralelo": "B",
+                                "estado": 0
+                            },
+                            {
+                                "id": 43,
+                                "nro": 6,
+                                "paralelo": "C",
+                                "estado": 0
+                            },
+                            {
+                                "id": 44,
+                                "nro": 6,
+                                "paralelo": "D",
+                                "estado": 0
+                            },
+                            {
+                                "id": 45,
+                                "nro": 6,
+                                "paralelo": "E",
+                                "estado": 0
+                            },
+                            {
+                                "id": 46,
+                                "nro": 6,
+                                "paralelo": "F",
+                                "estado": 0
+                            },
+                            {
+                                "id": 47,
+                                "nro": 6,
+                                "paralelo": "G",
+                                "estado": 0
+                            },
+                            {
+                                "id": 48,
+                                "nro": 6,
+                                "paralelo": "H",
+                                "estado": 0
+                            }
+                        ]
+                    }
+                }
+            },
+            "warning": [],
+            "error": [
+                {
+                    "message": "Si los campos de la peticion son incorrectos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No se reconocen uno o varios de los campos: habilitados",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                },
+                {
+                    "message": "Si el campo habilitados tiene otro formato.",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "El campo habilitados debe ser un Array",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                }
+            ]
+        },
+        {
+            "protected": true,
+            "url": "/admin/inscripcion",
+            "method": "POST",
+            "title": "Inscripción de Estudiantes",
+            "description": "Ruta para inscribir estudiantes, solo lo puede hacer el admin, aponombre: nombre de apoderado, apopar: parentesco con el estudiante(padre, madre, tio, etc.)",
+            "request": {
+                "cursoid": 2,
+                "nombres": "Carla Andrea",
+                "appat": "Pérez",
+                "apmat": "Gironda",
+                "ci": "888856",
+                "dir": "Zona Villa Imperio, Calle Romero, nro 265",
+                "cel": "6868655",
+                "aponombre": "Victor Manceda Doria",
+                "apocel": "66666666",
+                "apopar": "Papá"
+            },
+            "success": {
+                "message": "Retornamos el nuevo token del admin, y en data el username generado para el estudiante, dicho username es también su password por defecto",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Registro correcto",
+                    "usrmsg": "Estudiante: Carla Andrea inscrito correctamente en el curso: 1° de Secundaria, paralelo: B",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTk2MTg3NDIsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.EljDZwTxf7XIn1BFaPeaJU3z5Ltisz52fUjgqGF_qJa_RTFNQWXyuCBapoOsnOaIloCBUn26cYi1btxbT2_YrA",
+                        "data": "cperez1"
+                    }
+                }
+            },
+            "warning": [],
+            "error": [
+                {
+                    "message": "Si el id de los cursos es incorrecto",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No existe el curso con ID: 200",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                },
+                {
+                    "message": "Si los campos no estan correctos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No se reconocen uno o varios de los campos: cursoid, nombres, appat, apmat, ci, dir, cel, aponombre, apocel, apopar",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                }
+            ]
+        },
+        {
+            "protected": true,
+            "url": "/student/login",
+            "method": "POST",
+            "title": "Login de Estudiantes",
+            "description": "Ruta para loguearse como estudiante, solo para la APP",
+            "request": {
+                "username": "cperez2",
+                "password": "cperez2"
+            },
+            "success": {
+                "message": "Retornamos el nuevo token del estudiante(no cambiara nunca), datos del estudiante y de su apoderado",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Login correcto",
+                    "usrmsg": "Bienvenido/a, Carla Andrea",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJkYXRhIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImNwZXJlejIifX0.9qq07QN9TSUUkd9P348ty967o-2AB2dMkZuK3oeLeMqok5kdcwtecevVwLWJmiyGtOY2L_dDqe3NsY-wzlKYJw",
+                        "data": {
+                            "id": 2,
+                            "apoderado_id": 2,
+                            "ci": "888856",
+                            "nombres": "Carla Andrea",
+                            "appat": "Pérez",
+                            "apmat": "Gironda",
+                            "username": "cperez2",
+                            "dir": "Zona Villa Imperio, Calle Romero, nro 265",
+                            "nrocel": "6868655",
+                            "apoderado": {
+                                "nombre": "Victor Manceda Doria",
+                                "nroref": "66666666",
+                                "parentesco": "Papá"
+                            }
+                        }
+                    }
+                }
+            },
+            "warning": [
+                {
+                    "message": "si el username o password es incorrecto",
+                    "json": {
+                        "code": 401,
+                        "devmsg": "username no existe",
+                        "usrmsg": "Verifica los datos de ingreso e intenta de nuevo"
+                    }
+                }
+            ],
+            "error": [
+                {
+                    "message": "Si los campos no estan correctos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No se reconocen uno o varios de los campos: username, password",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                }
+            ]
+        }
     ]
 }
