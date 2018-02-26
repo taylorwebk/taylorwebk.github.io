@@ -1,6 +1,6 @@
 {
   "title": "ESCOLAR API DOCUMENTACIÓN",
-  "baseurl": "http://blackcrozz.com",
+  "baseurl": "http://blackcrozz.com/escolar-api",
   "services": [
     {
       "protected": false,
@@ -700,6 +700,114 @@
             }
           }
         ]
-      }
-  ]
+    },
+    {
+        "protected": true,
+        "url": "/admin/inscripcion",
+        "method": "POST",
+        "title": "Inscripción de Estudiantes",
+        "description": "Ruta para inscribir estudiantes, solo lo puede hacer el admin, aponombre: nombre de apoderado, apopar: parentesco con el estudiante(padre, madre, tio, etc.)",
+        "request": {
+            "cursoid": 2,
+            "nombres": "Carla Andrea",
+            "appat": "Pérez",
+            "apmat": "Gironda",
+            "ci": "888856",
+            "dir": "Zona Villa Imperio, Calle Romero, nro 265",
+            "cel": "6868655",
+            "aponombre": "Victor Manceda Doria",
+            "apocel": "66666666",
+            "apopar": "Papá"
+        },
+        "success": {
+            "message": "Retornamos el nuevo token del admin, y en data el username generado para el estudiante, dicho username es también su password por defecto",
+            "json": {
+                "code": 200,
+                "devmsg": "Registro correcto",
+                "usrmsg": "Estudiante: Carla Andrea inscrito correctamente en el curso: 1° de Secundaria, paralelo: B",
+                "content": {
+                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTk2MTg3NDIsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.EljDZwTxf7XIn1BFaPeaJU3z5Ltisz52fUjgqGF_qJa_RTFNQWXyuCBapoOsnOaIloCBUn26cYi1btxbT2_YrA",
+                    "data": "cperez1"
+                }
+            }
+        },
+        "warning": [],
+        "error": [
+          {
+            "message": "Si el id de los cursos es incorrecto",
+            "json": {
+                "code": 400,
+                "devmsg": "No existe el curso con ID: 200",
+                "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+            }
+          },
+          {
+            "message": "Si los campos no estan correctos",
+            "json": {
+                "code": 400,
+                "devmsg": "No se reconocen uno o varios de los campos: cursoid, nombres, appat, apmat, ci, dir, cel, aponombre, apocel, apopar",
+                "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+            }
+          }
+        ]
+    },
+    {
+        "protected": true,
+        "url": "/student/login",
+        "method": "POST",
+        "title": "Login de Estudiantes",
+        "description": "Ruta para loguearse como estudiante, solo para la APP",
+        "request": {
+            "username": "cperez2",
+            "password": "cperez2"
+        },
+        "success": {
+            "message": "Retornamos el nuevo token del estudiante(no cambiara nunca), datos del estudiante y de su apoderado",
+            "json": {
+                "code": 200,
+                "devmsg": "Login correcto",
+                "usrmsg": "Bienvenido/a, Carla Andrea",
+                "content": {
+                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJkYXRhIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImNwZXJlejIifX0.9qq07QN9TSUUkd9P348ty967o-2AB2dMkZuK3oeLeMqok5kdcwtecevVwLWJmiyGtOY2L_dDqe3NsY-wzlKYJw",
+                    "data": {
+                        "id": 2,
+                        "apoderado_id": 2,
+                        "ci": "888856",
+                        "nombres": "Carla Andrea",
+                        "appat": "Pérez",
+                        "apmat": "Gironda",
+                        "username": "cperez2",
+                        "dir": "Zona Villa Imperio, Calle Romero, nro 265",
+                        "nrocel": "6868655",
+                        "apoderado": {
+                            "nombre": "Victor Manceda Doria",
+                            "nroref": "66666666",
+                            "parentesco": "Papá"
+                        }
+                    }
+                }
+            }
+        },
+        "warning": [
+            {
+                "message": "si el username o password es incorrecto",
+                "json": {
+                    "code": 401,
+                    "devmsg": "username no existe",
+                    "usrmsg": "Verifica los datos de ingreso e intenta de nuevo"
+                }
+            }
+        ],
+        "error": [
+          {
+            "message": "Si los campos no estan correctos",
+            "json": {
+                "code": 400,
+                "devmsg": "No se reconocen uno o varios de los campos: username, password",
+                "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+            }
+          }
+        ]
+    }
+    ]
 }
