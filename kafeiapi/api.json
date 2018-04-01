@@ -1,0 +1,78 @@
+{
+    "title": "KAFEI-API DOCUMENTACIÓN",
+    "baseurl": "https://rest-apis-194315.appspot.com/kafeiapi",
+    "services": [
+        {
+            "protected": false,
+            "url": "/register",
+            "method": "POST",
+            "title": "REGISTRO",
+            "description": "Registro de Usuarios, no se permite username's y email's repetidos, revisar bien los campos (están sin validación para optimizar).",
+            "request": {
+                "name": "Oso Limachi",
+                "username": "oso",
+                "email": "oso@gmail.com",
+                "password": "12345"
+            },
+            "success": {
+                "message": "Usar message para el usuario final, a menos que se les ocurra un mejor mensaje",
+                "json": {
+                    "message": "Todo listo para ser más efectivo y comenzar a ahorrar.",
+                    "content": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJvc29zIiwiaWF0IjoxNTIyNTQzMDc3fQ.1B8g38o6UjZtNpyB2L1tPJ9VSjEKgnkwALlaoHIthZQ",
+                        "data": {
+                            "name": "Oso Limachi",
+                            "email": "osos@gmail.com",
+                            "username": "osos"
+                        }
+                    }
+                }
+            },
+            "warning": [
+                {
+                    "message": "Si el username o email ya están siendo usados, código 409 Conflict",
+                    "json": {
+                        "message": "Ups, el username: osos o email: osos@gmail.com ya esta siendo usado.",
+                        "content": null
+                    }
+                }
+            ],
+            "error": []
+        },
+        {
+            "protected": false,
+            "url": "/login",
+            "method": "POST",
+            "title": "LOGIN",
+            "description": "Ruta para loguearse. Pueden ingresar usando su correo o username con su password correspondiente.",
+            "request": {
+                "username": "oso",
+                "password": "12345"
+            },
+            "success": {
+                "message": "Si todo fue correcto. Mostrar el message al usuario, a menos que se les ocurra uno mejor.",
+                "json": {
+                    "message": "Es grato tenerte de vuelta.",
+                    "content": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJvc28iLCJpYXQiOjE1MjI1NDA1MzJ9.jOh1VS_WuOMRo08zjvxhFOiu1vd_SqD7RIUAMMA4-NE",
+                        "data": {
+                            "name": "Oso Limachi",
+                            "email": "oso@gmail.com",
+                            "username": "oso"
+                        }
+                    }
+                }
+            },
+            "warning": [
+                {
+                    "message": "Si el username, correo o password son incorrectos. Código 401 Unauthorized.",
+                    "json": {
+                        "message": "Datos de ingreso no válidos.",
+                        "content": null
+                    }
+                }
+            ],
+            "error": []
+        }
+    ]
+}
