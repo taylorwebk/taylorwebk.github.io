@@ -76,7 +76,7 @@
         },
         {
             "protected": true,
-            "url": "/entry",
+            "url": "/user/entry",
             "method": "POST",
             "title": "NUEVO INGRESO",
             "description": "Ruta para registrar ingresos ($us), el valor de amount debe tener 2 decimales.",
@@ -142,7 +142,7 @@
         },
         {
             "protected": true,
-            "url": "/entries",
+            "url": "/user/entries",
             "method": "GET",
             "title": "LISTA INGRESOS",
             "description": "Listado de ingresos, es un GET, pero necesita token.",
