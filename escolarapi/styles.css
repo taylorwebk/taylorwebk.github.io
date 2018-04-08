@@ -371,6 +371,10 @@
   font-weight: bold;
   border-radius: 6px;
   box-shadow: 1px 1px 3px 3px #666;
+  max-width: 100%;
+}
+.content {
+  font-size: 18px;
 }
 .string {
   color: #F9F398;

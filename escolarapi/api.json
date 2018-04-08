@@ -19,13 +19,75 @@
                     "devmsg": "Login correcto",
                     "usrmsg": "Buenas tardes Bugs",
                     "content": {
-                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MTgxOTM4NzgsImRhdGEiOnsiaWQiOjEsImNpIjoiMTIzNDU2NyJ9fQ.5ZMzfBVnIgW8tv3tlA5CFrmX8abqjavm9Vwq21O9oNu9gihAlaI-bVki_zx03BxjC8fLllKHz2rY12vQ6zPfrw",
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyMzE5OTU0MSwiZXhwIjoxNTIzMjA0OTQxLCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
                         "data": {
-                            "nombres": "Bugs",
-                            "appat": "Bunny",
-                            "apmat": "Bunny",
-                            "cel": "77777777",
-                            "ci": "1234567"
+                            "gestion": 2018,
+                            "bimestre": 1,
+                            "materias": [
+                                {
+                                    "id": 1,
+                                    "nombre": "REL"
+                                },
+                                {
+                                    "id": 2,
+                                    "nombre": "LEN"
+                                },
+                                {
+                                    "id": 3,
+                                    "nombre": "SOC"
+                                },
+                                {
+                                    "id": 4,
+                                    "nombre": "BIO"
+                                },
+                                {
+                                    "id": 5,
+                                    "nombre": "A.P."
+                                },
+                                {
+                                    "id": 6,
+                                    "nombre": "MAT"
+                                },
+                                {
+                                    "id": 7,
+                                    "nombre": "T.V."
+                                },
+                                {
+                                    "id": 8,
+                                    "nombre": "ING"
+                                },
+                                {
+                                    "id": 9,
+                                    "nombre": "E.F."
+                                },
+                                {
+                                    "id": 10,
+                                    "nombre": "MUS"
+                                },
+                                {
+                                    "id": 11,
+                                    "nombre": "FIL"
+                                },
+                                {
+                                    "id": 12,
+                                    "nombre": "LIT"
+                                },
+                                {
+                                    "id": 13,
+                                    "nombre": "FI-QUI"
+                                },
+                                {
+                                    "id": 14,
+                                    "nombre": "FIS"
+                                }
+                            ],
+                            "admin": {
+                                "nombres": "Bugs",
+                                "appat": "Bunny",
+                                "apmat": "Bunny",
+                                "cel": "77777777",
+                                "ci": "1234567"
+                            }
                         }
                     }
                 }
@@ -733,6 +795,44 @@
                     "json": {
                         "code": 400,
                         "devmsg": "No se reconocen uno o varios de los campos: cursoid, nombres, appat, apmat, ci, dir, cel, aponombre, apocel, apopar",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                }
+            ]
+        },
+        {
+            "protected": true,
+            "url": "/admin/profesor",
+            "method": "POST",
+            "title": "Registro Nuevo Docente",
+            "description": "Registro de docentes, importante, el array de ID's son de las materias que puede dictar. Estos ID's sacarlos del login.",
+            "request": {
+                "nombres":"Moises",
+                "appat":"Valle",
+                "apmat": "Paco",
+                "ci": "8455665",
+                "dir": "Av. La Paz, nro. 255",
+                "materias": [10, 11]
+            },
+            "success": {
+                "message": "Solo se retorna el token, pues la lista de docentes para el horario vendra con el horario",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Registro exitoso",
+                    "usrmsg": "Docente: Moises registrado en el sistema.",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyMzE5OTcyMSwiZXhwIjoxNTIzMjA1MTIxLCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": null
+                    }
+                }
+            },
+            "warning": [],
+            "error": [
+                {
+                    "message": "Si los campos no estan correctos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No se reconocen uno o varios de los campos: nombres, appat, apmat, ci, dir, materias",
                         "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
                     }
                 }
