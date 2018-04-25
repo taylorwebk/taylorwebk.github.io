@@ -202,6 +202,122 @@
             },
             "warning": [],
             "error": []
-        }
+        },
+        {
+            "protected": true,
+            "url": "/user/activity",
+            "method": "POST",
+            "title": "NUEVA ACTIVIDAD",
+            "description": "Ruta para registrar una nueva actividad.",
+            "request": {
+                "literal": "Dormir"
+            },
+            "success": {
+                "message": "Agregamos una nueva actividad, retornamos la lista actualizada.",
+                "json": {
+                    "message": "Nueva actividad guardada.",
+                    "content": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YXlsb3IiLCJpYXQiOjE1MjQ2OTQ1ODN9.xkMw6YQCnrFR-33mt7RSnDih6hC_pCUtNakIGlLKExo",
+                        "data": [
+                            {
+                                "id": 1,
+                                "literal": "Leer 100 horas de piedad",
+                                "date": "Hoy",
+                                "time": "Hace 2 hora(s)",
+                                "hours": 0,
+                                "minutes": 0
+                            },
+                            {
+                                "id": 2,
+                                "literal": "Ejercicio",
+                                "date": "Hoy",
+                                "time": "Hace 2 hora(s)",
+                                "hours": 0,
+                                "minutes": 0
+                            },
+                            {
+                                "id": 3,
+                                "literal": "Paseo",
+                                "date": "Hoy",
+                                "time": "Hace 2 hora(s)",
+                                "hours": 0,
+                                "minutes": 0
+                            },
+                            {
+                                "id": 4,
+                                "literal": "Procrastinar",
+                                "date": "Hoy",
+                                "time": "Hace 41 minuto(s)",
+                                "hours": 0,
+                                "minutes": 0
+                            },
+                            {
+                                "id": 5,
+                                "literal": "Dormir",
+                                "date": "Hoy",
+                                "time": "Hace 0 minuto(s)",
+                                "hours": 0,
+                                "minutes": 0
+                            }
+                        ]
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
+        },
+        {
+            "protected": true,
+            "url": "/user/activities",
+            "method": "GET",
+            "title": "LISTA ACTIVIDADES",
+            "description": "Listado de actividades.",
+            "request": null,
+            "success": {
+                "message": "Lista de actividades.",
+                "json": {
+                    "message": "Actividades cargadas correctamente.",
+                    "content": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YXlsb3IiLCJpYXQiOjE1MjQ2OTQ1NjZ9.79AUCHyKHbtftSdUyocgWMvQt9GkeZEKQp8_YQJrZn0",
+                        "data": [
+                            {
+                                "id": 1,
+                                "literal": "Leer 100 horas de piedad",
+                                "date": "Hoy",
+                                "time": "Hace 2 hora(s)",
+                                "hours": 0,
+                                "minutes": 0
+                            },
+                            {
+                                "id": 2,
+                                "literal": "Ejercicio",
+                                "date": "Hoy",
+                                "time": "Hace 2 hora(s)",
+                                "hours": 0,
+                                "minutes": 0
+                            },
+                            {
+                                "id": 3,
+                                "literal": "Paseo",
+                                "date": "Hoy",
+                                "time": "Hace 2 hora(s)",
+                                "hours": 0,
+                                "minutes": 0
+                            },
+                            {
+                                "id": 4,
+                                "literal": "Procrastinar",
+                                "date": "Hoy",
+                                "time": "Hace 41 minuto(s)",
+                                "hours": 0,
+                                "minutes": 0
+                            }
+                        ]
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
+        },
     ]
 }
