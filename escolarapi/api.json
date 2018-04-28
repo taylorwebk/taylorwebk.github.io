@@ -807,12 +807,15 @@
             "title": "Registro Nuevo Docente",
             "description": "Registro de docentes, importante, el array de ID's son de las materias que puede dictar. Estos ID's sacarlos del login.",
             "request": {
-                "nombres":"Moises",
-                "appat":"Valle",
+                "nombres": "Moises",
+                "appat": "Valle",
                 "apmat": "Paco",
                 "ci": "8455665",
                 "dir": "Av. La Paz, nro. 255",
-                "materias": [10, 11]
+                "materias": [
+                    10,
+                    11
+                ]
             },
             "success": {
                 "message": "Solo se retorna el token, pues la lista de docentes para el horario vendra con el horario",
@@ -895,6 +898,526 @@
                     }
                 }
             ]
+        },
+        {
+            "protected": true,
+            "url": "/admin/horario/curso/{id}",
+            "method": "GET",
+            "title": "Horario del Curso",
+            "description": "Ruta obtener el horario y las materias de un determinado curso",
+            "request": {},
+            "success": {
+                "message": "No suele haber errores",
+                "json": {
+                    "code": 200,
+                    "devmsg": "todo ok",
+                    "usrmsg": "Horario obtenido satisfactoriamente",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyNDkyMjU4NSwiZXhwIjoxNTI0OTI3OTg1LCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": {
+                            "id_curso": 7,
+                            "materias": [
+                                {
+                                    "id": 1,
+                                    "materia": "REL",
+                                    "profesores": [
+                                        {
+                                            "id": 1,
+                                            "nombre": "asdfas sdfasd"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 2,
+                                    "materia": "LEN",
+                                    "profesores": [
+                                        {
+                                            "id": 2,
+                                            "nombre": "Daniel Garcia"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 3,
+                                    "materia": "SOC",
+                                    "profesores": [
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 4,
+                                    "materia": "BIO",
+                                    "profesores": [
+                                        {
+                                            "id": 1,
+                                            "nombre": "asdfas sdfasd"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "nombre": "Daniel Garcia"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 5,
+                                    "materia": "A.P.",
+                                    "profesores": [
+                                        {
+                                            "id": 1,
+                                            "nombre": "asdfas sdfasd"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 6,
+                                    "materia": "MAT",
+                                    "profesores": [
+                                        {
+                                            "id": 1,
+                                            "nombre": "asdfas sdfasd"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "nombre": "Daniel Garcia"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 8,
+                                    "materia": "ING",
+                                    "profesores": [
+                                        {
+                                            "id": 2,
+                                            "nombre": "Daniel Garcia"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 7,
+                                    "materia": "T.V.",
+                                    "profesores": [
+                                        {
+                                            "id": 1,
+                                            "nombre": "asdfas sdfasd"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "nombre": "Daniel Garcia"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 9,
+                                    "materia": "E.F.",
+                                    "profesores": [
+                                        {
+                                            "id": 2,
+                                            "nombre": "Daniel Garcia"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 11,
+                                    "materia": "FIL",
+                                    "profesores": [
+                                        {
+                                            "id": 2,
+                                            "nombre": "Daniel Garcia"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                },
+                                {
+                                    "id": 10,
+                                    "materia": "MUS",
+                                    "profesores": [
+                                        {
+                                            "id": 2,
+                                            "nombre": "Daniel Garcia"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nombre": "Daniel Sanchez"
+                                        }
+                                    ],
+                                    "profesor": null
+                                }
+                            ],
+                            "horario": [
+                                {
+                                    "dia": "Lunes",
+                                    "periodos": [
+                                        {
+                                            "id": 1,
+                                            "nro": 1,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 2,
+                                            "nro": 2,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 3,
+                                            "nro": 3,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 4,
+                                            "nro": 4,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 5,
+                                            "nro": 5,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 6,
+                                            "nro": 6,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 7,
+                                            "nro": 7,
+                                            "id_materia": null,
+                                            "literal": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "dia": "Martes",
+                                    "periodos": [
+                                        {
+                                            "id": 8,
+                                            "nro": 1,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 9,
+                                            "nro": 2,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 10,
+                                            "nro": 3,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 11,
+                                            "nro": 4,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 12,
+                                            "nro": 5,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 13,
+                                            "nro": 6,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 14,
+                                            "nro": 7,
+                                            "id_materia": null,
+                                            "literal": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "dia": "Miércoles",
+                                    "periodos": [
+                                        {
+                                            "id": 15,
+                                            "nro": 1,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 16,
+                                            "nro": 2,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 17,
+                                            "nro": 3,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 18,
+                                            "nro": 4,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 19,
+                                            "nro": 5,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 20,
+                                            "nro": 6,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 21,
+                                            "nro": 7,
+                                            "id_materia": null,
+                                            "literal": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "dia": "Jueves",
+                                    "periodos": [
+                                        {
+                                            "id": 22,
+                                            "nro": 1,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 23,
+                                            "nro": 2,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 24,
+                                            "nro": 3,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 25,
+                                            "nro": 4,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 26,
+                                            "nro": 5,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 27,
+                                            "nro": 6,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 28,
+                                            "nro": 7,
+                                            "id_materia": null,
+                                            "literal": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "dia": "Viernes",
+                                    "periodos": [
+                                        {
+                                            "id": 29,
+                                            "nro": 1,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 30,
+                                            "nro": 2,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 31,
+                                            "nro": 3,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 32,
+                                            "nro": 4,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 33,
+                                            "nro": 5,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 34,
+                                            "nro": 6,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 35,
+                                            "nro": 7,
+                                            "id_materia": null,
+                                            "literal": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "dia": "Sábado",
+                                    "periodos": [
+                                        {
+                                            "id": 36,
+                                            "nro": 1,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 37,
+                                            "nro": 2,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 38,
+                                            "nro": 3,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 39,
+                                            "nro": 4,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 40,
+                                            "nro": 5,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 41,
+                                            "nro": 6,
+                                            "id_materia": null,
+                                            "literal": null
+                                        },
+                                        {
+                                            "id": 42,
+                                            "nro": 7,
+                                            "id_materia": null,
+                                            "literal": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
+        },
+        {
+            "protected": true,
+            "url": "/admin/horario/curso/{id}",
+            "method": "POST",
+            "title": "Registro Horario de un Curso",
+            "description": "ESTOY SUPONIENDO QUE NO HABRA ERRORES. En materias se asigna un docente a una materia {idmat: iddoc}, en los periodos se asina una materia a un periodo {idper: idmat}",
+            "request": {
+                "materias": {
+                    "1": 1,
+                    "2": 2,
+                    "3": 3,
+                    "4": 1,
+                    "6": 1,
+                    "8": 2
+                },
+                "periodos": {
+                    "1": 1,
+                    "5": 3,
+                    "12": 4,
+                    "40": 8
+                }
+            },
+            "success": {
+                "message": "Solo se retorna el token, no vi la necesidad de retornar algo. Una vez hecho esto, todo el horario se actualiza.",
+                "json": {
+                    "code": 200,
+                    "devmsg": "todo ok",
+                    "usrmsg": "Horario guardado.",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyNDkyMzE1MCwiZXhwIjoxNTI0OTI4NTUwLCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": null
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
         }
     ]
 }
