@@ -1418,6 +1418,396 @@
             },
             "warning": [],
             "error": []
+        },
+        {
+            "protected": true,
+            "url": "/admin/profesores",
+            "method": "GET",
+            "title": "Lista de Docentes",
+            "description": "Obtiene la lista de docentes con sus materias",
+            "request": {},
+            "success": {
+                "message": "No suele haber errores",
+                "json": {
+                    "code": 200,
+                    "devmsg": "todo ok",
+                    "usrmsg": "Lista de docentes cargado",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyNjE0NTU0NCwiZXhwIjoxNTI2MTUwOTQ0LCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": [
+                            {
+                                "id": 1,
+                                "nombres": "asdfas",
+                                "appat": "sdfasd",
+                                "apmat": "asdfsadf",
+                                "ci": "213213",
+                                "dir": "asdfkadsfkomkl",
+                                "materias": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "REL",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 4,
+                                        "nombre": "BIO",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 5,
+                                        "nombre": "A.P.",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 6,
+                                        "nombre": "MAT",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 7,
+                                        "nombre": "T.V.",
+                                        "estado": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 2,
+                                "nombres": "Daniel",
+                                "appat": "Garcia",
+                                "apmat": "Cortez",
+                                "ci": "84333144",
+                                "dir": "Av. Landaeta nro 765",
+                                "materias": [
+                                    {
+                                        "id": 2,
+                                        "nombre": "LEN",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 4,
+                                        "nombre": "BIO",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 6,
+                                        "nombre": "MAT",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 7,
+                                        "nombre": "T.V.",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 8,
+                                        "nombre": "ING",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 9,
+                                        "nombre": "E.F.",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 10,
+                                        "nombre": "MUS",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 11,
+                                        "nombre": "FIL",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "LIT",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 13,
+                                        "nombre": "FI-QUI",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 14,
+                                        "nombre": "FIS",
+                                        "estado": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 3,
+                                "nombres": "Daniel",
+                                "appat": "Sanchez",
+                                "apmat": "Moya",
+                                "ci": "8433552",
+                                "dir": "Av. dir etc",
+                                "materias": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "REL",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 2,
+                                        "nombre": "LEN",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 3,
+                                        "nombre": "SOC",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 4,
+                                        "nombre": "BIO",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 5,
+                                        "nombre": "A.P.",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 6,
+                                        "nombre": "MAT",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 7,
+                                        "nombre": "T.V.",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 8,
+                                        "nombre": "ING",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 9,
+                                        "nombre": "E.F.",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 10,
+                                        "nombre": "MUS",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 11,
+                                        "nombre": "FIL",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "LIT",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 13,
+                                        "nombre": "FI-QUI",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 14,
+                                        "nombre": "FIS",
+                                        "estado": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 4,
+                                "nombres": "Tt",
+                                "appat": "qw",
+                                "apmat": "qw",
+                                "ci": "wer",
+                                "dir": "qwer",
+                                "materias": [
+                                    {
+                                        "id": 2,
+                                        "nombre": "LEN",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 4,
+                                        "nombre": "BIO",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 6,
+                                        "nombre": "MAT",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 7,
+                                        "nombre": "T.V.",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 8,
+                                        "nombre": "ING",
+                                        "estado": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 14,
+                                "nombres": "Maria",
+                                "appat": "Gonzales",
+                                "apmat": "Daria",
+                                "ci": "8455688",
+                                "dir": "Av. los sauces nro. 256",
+                                "materias": [
+                                    {
+                                        "id": 3,
+                                        "nombre": "SOC",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 5,
+                                        "nombre": "A.P.",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 7,
+                                        "nombre": "T.V.",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 8,
+                                        "nombre": "ING",
+                                        "estado": 1
+                                    },
+                                    {
+                                        "id": 10,
+                                        "nombre": "MUS",
+                                        "estado": 1
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
+        },
+        {
+            "protected": true,
+            "url": "/admin/profesor/{id}",
+            "method": "PUT",
+            "title": "Actualizar Profesor",
+            "description": "Actualizar los datos de un profesor, incluyendo las materias que dicta, en materias, enviar un array con los ids de todas las materias que dicta",
+            "request": {
+                "nombres":"Moises",
+                "appat":"Valle",
+                "apmat": "Paco",
+                "ci": "8455665",
+                "dir": "Av. La Paz, nro. 255",
+                "materias": [5,6,7,8,9]
+            },
+            "success": {
+                "message": "Solo se retorna el token, no vi la necesidad de retornar algo.",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Actualización correcta",
+                    "usrmsg": "Docente: Moises actualizado correctamente.",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyNjE0NjE5MiwiZXhwIjoxNTI2MTUxNTkyLCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": null
+                    }
+                }
+            },
+            "warning": [],
+            "error": [
+                {
+                    "message": "Si los campos de la peticion son incorrectos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No se reconocen uno o varios de los campos: nombres, appat, apmat, ci, dir, materias",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                }
+            ]
+        },
+        {
+            "protected": true,
+            "url": "/admin/estudiantes",
+            "method": "GET",
+            "title": "Lista de Estudiantes",
+            "description": "Obtiene la lista simple de estudiantes a nivel general",
+            "request": {},
+            "success": {
+                "message": "No suele haber errores",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Todo OK",
+                    "usrmsg": "Lista de estudiantes obtenida correctamente.",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyNjE0NjM4MiwiZXhwIjoxNTI2MTUxNzgyLCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": [
+                            {
+                                "id": 2,
+                                "nombres": "Maria Delia",
+                                "appat": "Jimenez",
+                                "apmat": "Paredes",
+                                "ci": "888853"
+                            },
+                            {
+                                "id": 4,
+                                "nombres": "Carla Andrea",
+                                "appat": "Pérez",
+                                "apmat": "Gironda",
+                                "ci": "888856"
+                            },
+                            {
+                                "id": 5,
+                                "nombres": "hola mundo",
+                                "appat": "qwerqew",
+                                "apmat": "qwerqw",
+                                "ci": "12321"
+                            },
+                            {
+                                "id": 10,
+                                "nombres": "asdfasfd",
+                                "appat": "asdfadsf",
+                                "apmat": "asdfas",
+                                "ci": "123123123"
+                            },
+                            {
+                                "id": 11,
+                                "nombres": "asf",
+                                "appat": "sdfsaf",
+                                "apmat": "asdfads",
+                                "ci": "123123123"
+                            },
+                            {
+                                "id": 12,
+                                "nombres": "David",
+                                "appat": "Foronda",
+                                "apmat": "Garcia",
+                                "ci": "8466533"
+                            },
+                            {
+                                "id": 13,
+                                "nombres": "Jorge ",
+                                "appat": "Paxo",
+                                "apmat": "Mancilla",
+                                "ci": "845569"
+                            },
+                            {
+                                "id": 14,
+                                "nombres": "David",
+                                "appat": "Jones",
+                                "apmat": "Fool",
+                                "ci": "8455666"
+                            }
+                        ]
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
         }
     ]
 }
