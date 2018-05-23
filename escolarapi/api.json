@@ -1699,12 +1699,18 @@
             "title": "Actualizar Profesor",
             "description": "Actualizar los datos de un profesor, incluyendo las materias que dicta, en materias, enviar un array con los ids de todas las materias que dicta",
             "request": {
-                "nombres":"Moises",
-                "appat":"Valle",
+                "nombres": "Moises",
+                "appat": "Valle",
                 "apmat": "Paco",
                 "ci": "8455665",
                 "dir": "Av. La Paz, nro. 255",
-                "materias": [5,6,7,8,9]
+                "materias": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
             },
             "success": {
                 "message": "Solo se retorna el token, no vi la necesidad de retornar algo.",
@@ -1808,6 +1814,90 @@
             },
             "warning": [],
             "error": []
+        },
+        {
+            "protected": true,
+            "url": "/admin/estudiante/{id}",
+            "method": "GET",
+            "title": "Detalles del estudiante",
+            "description": "Obtiene los datos del estudiante, apoderado y el curso en el que se encuentra actualmente",
+            "request": {},
+            "success": {
+                "message": "No suele haber errores",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Todo OK",
+                    "usrmsg": "Datos del estudiante obtenidos correctamente.",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyNzEwNzk0NiwiZXhwIjoxNTI3MTEzMzQ2LCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": {
+                            "id": 2,
+                            "ci": "888853",
+                            "nombres": "Maria Delia",
+                            "appat": "Jimenez",
+                            "apmat": "Paredes",
+                            "username": "mjimenez1",
+                            "dir": "Zona Villa Imperio, Calle Romero, nro 265",
+                            "nrocel": "6868651",
+                            "apoderado": {
+                                "nombre": "Victor Manceda Doria",
+                                "nroref": "66666666",
+                                "parentesco": "Papá"
+                            },
+                            "fecha": "2018-04-28",
+                            "curso": {
+                                "id": 2,
+                                "nro": 1,
+                                "paralelo": "B",
+                                "estado": 1
+                            }
+                        }
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
+        },
+        {
+            "protected": true,
+            "url": "/admin/estudiante/{id}",
+            "method": "PUT",
+            "title": "Actualizar Estudiante",
+            "description": "Actualizar los datos de un estudiante, incluyendo datos del apoderado (prefijo apo)",
+            "request": {
+                "nombres": "Diana Alejandra",
+                "appat": "Ortez",
+                "apmat": "Fernandez",
+                "ci": "8888888",
+                "dir": "nueva direccion",
+                "nrocel": "78787878",
+                "aponombre": "Daniela Luna Vega",
+                "aponro": "66667777",
+                "apopar": "Madre"
+            },
+            "success": {
+                "message": "Solo se retorna el token, no vi la necesidad de retornar algo.",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Todo OK",
+                    "usrmsg": "Datos del estudiante actualizados.",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyNzEwODExMCwiZXhwIjoxNTI3MTEzNTEwLCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": null
+                    }
+                }
+            },
+            "warning": [],
+            "error": [
+                {
+                    "message": "Si los campos de la peticion son incorrectos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No se reconocen uno o varios de los campos: nombres, appat, apmat, ci, dir, nrocel, aponombre, aponro, apopar",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                }
+            ]
         }
     ]
 }
