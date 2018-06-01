@@ -1898,6 +1898,195 @@
                     }
                 }
             ]
+        },
+        {
+            "protected": false,
+            "url": "/prof/login",
+            "method": "POST",
+            "title": "Profesor Login",
+            "description": "Login para profesores, el password por defecto es su CI",
+            "request": {
+                "ci":8455665,
+                "password":"8455665"
+            },
+            "success": {
+                "message": "Te envio los datos que quedamos, datos, cursos a los que dicta y un curso actual",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Login correcto",
+                    "usrmsg": "Bienvenido/a, Moises Roca",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE1Mjc4MTg1MjIsImV4cCI6MTUyNzgyMzkyMiwiaWQiOjEsImNpIjoiODQ1NTY2NSJ9.",
+                        "data": {
+                            "id": 1,
+                            "nombres": "Moises Roca",
+                            "appat": "Valle",
+                            "apmat": "Paco",
+                            "ci": "8455665",
+                            "dir": "Av. La Paz, nro. 255",
+                            "cursos": [
+                                {
+                                    "id": 6,
+                                    "nro": 1,
+                                    "par": "A",
+                                    "mat": "MAT",
+                                    "campo": "Ciencia, Tecnología y Producción"
+                                },
+                                {
+                                    "id": 106,
+                                    "nro": 2,
+                                    "par": "B",
+                                    "mat": "T.V.",
+                                    "campo": "Comunidad y Sociedad"
+                                }
+                            ],
+                            "curso_actual": {
+                                "id": 6,
+                                "nro": 1,
+                                "par": "A",
+                                "mat": "MAT",
+                                "campo": "Ciencia, Tecnología y Producción",
+                                "trabajos": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Investigacion plantas",
+                                        "fecha": "2018-05-31",
+                                        "bimestre": 1
+                                    }
+                                ],
+                                "estudiantes": [
+                                    {
+                                        "id": 1,
+                                        "nombres": "Jorge",
+                                        "appat": "Davila",
+                                        "apmat": "mamani",
+                                        "ci": "8455699",
+                                        "trabajos": []
+                                    },
+                                    {
+                                        "id": 2,
+                                        "nombres": "Dario",
+                                        "appat": "Mamani",
+                                        "apmat": "Chavez",
+                                        "ci": "8455788",
+                                        "trabajos": [
+                                            {
+                                                "id": 1,
+                                                "nota": 80
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "warning": [
+                {
+                    "message": "Si el usuario o el username son incorrectos",
+                    "json": {
+                        "code": 401,
+                        "devmsg": "ci o password inválidos.",
+                        "usrmsg": "Ups... tuvimos un problema con el CI o password ingresados, por favor intente de nuevo"
+                    }
+                }
+            ],
+            "error": [
+                {
+                    "message": "Si los campos de la peticion son incorrectos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No se reconocen uno o varios de los campos: ci, password",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                }
+            ]
+        },
+        {
+            "protected": false,
+            "url": "/prof/trabajo",
+            "method": "POST",
+            "title": "Nuevo Trabajo",
+            "description": "Service para que un docente pueda agregar un trabajo a su materia",
+            "request": {
+                "id":"67",
+                "nombre":"Investigacion INRI"
+            },
+            "success": {
+                "message": "El campo ID para la peticion lo sacas de la lista de materias o del curso actual",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Todo OK",
+                    "usrmsg": "Trabajo: Investigacion INRI creado en fecha: 2018-06-01",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyNzgxOTg4NCwiZXhwIjoxNTI3ODI1Mjg0LCJpZCI6MSwiY2kiOiI4NDU1NjY1In0.",
+                        "data": {
+                            "nombre": "Investigacion INRI",
+                            "fecha": "2018-06-01",
+                            "bimestre_id": 1,
+                            "instruye_id": 1,
+                            "id": 1
+                        }
+                    }
+                }
+            },
+            "warning": [],
+            "error": [
+                {
+                    "message": "Si los campos de la peticion son incorrectos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "Tabla cursa, no existe ID: 670",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                },
+                {
+                    "message": "si no se reconocen los campos",
+                    "json": {
+                        "code": 400,
+                        "devmsg": "No se reconocen uno o varios de los campos: id, nombre",
+                        "usrmsg": "Error desconocido, por favor contacte al desarrollador, codigo: 400"
+                    }
+                }
+            ]
+        },
+        {
+            "protected": true,
+            "url": "/prof/curso/{id}",
+            "method": "GET",
+            "title": "Tareas y Estudiantes",
+            "description": "Obtiene la lista de tareas y estudiantes de un curso, practicamente la misma respuesta del campo curso_actual del login",
+            "request": {},
+            "success": {
+                "message": "No suele haber errores, el ID lo sacas de la lista de materias cuando hace login",
+                "json": {
+                    "code": 200,
+                    "devmsg": "Login correcto",
+                    "usrmsg": "Bienvenido/a, Moises Roca",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJibGFja2Nyb3p6LmNvbSIsImlhdCI6MTUyNzgyMDUzMSwiZXhwIjoxNTI3ODI1OTMxLCJpZCI6MSwiY2kiOiI4NDU1NjY1In0.",
+                        "data": {
+                            "id": 67,
+                            "nro": 1,
+                            "par": "G",
+                            "mat": "REL",
+                            "campo": "Cosmos y Pensamiento",
+                            "trabajos": [
+                                {
+                                    "id": 1,
+                                    "nombre": "Investigacion INRI",
+                                    "fecha": "2018-06-01",
+                                    "bimestre": 1
+                                }
+                            ],
+                            "estudiantes": []
+                        }
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
         }
     ]
 }
