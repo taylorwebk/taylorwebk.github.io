@@ -1,6 +1,6 @@
 {
     "title": "ESCOLAR API DOCUMENTACIÓN",
-    "baseurl": "http://blackcrozz.com/escolar-api",
+    "baseurl": "https://sansebastianb.com/escolarapi",
     "services": [
         {
             "protected": false,
@@ -2083,6 +2083,82 @@
                             "estudiantes": []
                         }
                     }
+                }
+            },
+            "warning": [],
+            "error": []
+        },
+        {
+            "protected": true,
+            "url": "/admin/comunicado",
+            "method": "POST",
+            "title": "Nuevo Comunicado",
+            "description": "Service para que un admin pueda crear un nuevo comunicado",
+            "request": {
+                "titulo": "Citacion",
+                "cont": "Se cita a todos los padres de familia a la reunion gral que se llevara a"
+            },
+            "success": {
+                "message": "En teoria no hay errores",
+                "json": {
+                    "code": 200,
+                    "devmsg": "todo OK",
+                    "usrmsg": "Comunicado creado",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJzYW5zZWJhc3RpYW5iLmNvbSIsImlhdCI6MTUyODQzMDk1MSwiZXhwIjoxNTI4NDM2MzUxLCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": null
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
+        },
+        {
+            "protected": true,
+            "url": "/admin/comunicado/{id}",
+            "method": "DELETE",
+            "title": "Borrar Comunicado",
+            "description": "Service para que un admin pueda borrar un comunicado",
+            "request": {},
+            "success": {
+                "message": "En teoria no hay errores",
+                "json": {
+                    "code": 200,
+                    "devmsg": "ok",
+                    "usrmsg": "todo ok",
+                    "content": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJpc3MiOiJzYW5zZWJhc3RpYW5iLmNvbSIsImlhdCI6MTUyODQzMTIyMiwiZXhwIjoxNTI4NDM2NjIyLCJpZCI6MSwiY2kiOiIxMjM0NTY3In0.",
+                        "data": null
+                    }
+                }
+            },
+            "warning": [],
+            "error": []
+        },
+        {
+            "protected": false,
+            "url": "/admin/comunicados",
+            "method": "GET",
+            "title": "Lista de Comunicados",
+            "description": "Service para que todos tenga la lista de comunicados",
+            "request": {},
+            "success": {
+                "message": "En teoria no hay errores",
+                "json": {
+                    "code": 200,
+                    "devmsg": "OK",
+                    "usrmsg": "todo OK",
+                    "content": [
+                        {
+                            "id": 2,
+                            "admin_id": 1,
+                            "fecha": "2018-06-08",
+                            "hora": "00:15:48",
+                            "titulo": "Citacion",
+                            "cont": "Se cita a todos los padres de familia a la reunion gral que se llevara a",
+                            "remitente": "Bugs"
+                        }
+                    ]
                 }
             },
             "warning": [],
